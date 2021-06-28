@@ -50,6 +50,7 @@ export default class HeroSection extends React.Component {
                     className={classNames('container', {
                         'container--medium': !isHorizontal
                     })}
+                    data-sb-object-id="fake"
                 >
                     <div className="hero__content grid items-center">
                         {hasMedia && (
