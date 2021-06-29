@@ -76,7 +76,7 @@ export default class Header extends React.Component {
         const secondaryNavLinks = _.get(header, 'secondary_nav_links');
 
         return (
-            <header className="site-header py-2">
+            <header className="site-header py-2" data-sb-field-path={`${config.__metadata.id}:header`}>
                 <div className="container">
                     <nav className="navbar flex items-center" aria-label="Main Navigation">
                         <Link className="sr-only" href="#content">Skip to main content</Link>
