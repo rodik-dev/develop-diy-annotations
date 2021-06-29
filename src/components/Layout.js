@@ -104,7 +104,7 @@ export default class Body extends React.Component {
                 <div id="site-wrap" className="site">
                     {hasAnncmnt && anncmntContent && <Announcement page={page} anncmnt={anncmnt} />}
                     <Header page={page} config={config} />
-                    <main id="content" className="site-content">
+                    <main id="content" className="site-content" data-sb-object-id={page.__metadata.id}>
                         {this.props.children}
                     </main>
                     <Footer config={config} />
