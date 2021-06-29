@@ -30,6 +30,8 @@ export default class Action extends React.Component {
             attrs.rel = [(newWindow ? 'noopener' : ''), (noFollow ? 'nofollow' : '')].filter(Boolean).join(' ');
         }
 
+        const sbFieldPath = 
+
         return (
             <Link href={withPrefix(url)} {...attrs} className={classes} data-sb-field-path={hasIcon && icon ? "label#span[1]" : "label"}>
                 {(hasIcon && icon) ? (
