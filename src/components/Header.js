@@ -42,7 +42,7 @@ export default class Header extends React.Component {
 
     renderNavLinks(navLinks, pageUrl, navKey) {
         return (
-            <ul className="menu flex-md items-md-center">
+            <ul className="menu flex-md items-md-center" data-sb-field-path={navKey}>
                 {_.map(navLinks, (action, index) => {
                     const actionUrl = _.trim(_.get(action, 'url'), '/');
                     const actionStyle = _.get(action, 'style', 'link');
