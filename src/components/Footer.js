@@ -42,7 +42,7 @@ export default class Footer extends React.Component {
         const links = _.get(footer, 'links');
 
         return (
-            <footer className="site-footer">
+            <footer className="site-footer" data-sb-field-path={`${config.__metadata.id}:header`}>
                 {(logo || (hasPrimaryNav && !_.isEmpty(primaryNavLinks)) || (hasSecondaryNav && !_.isEmpty(secondaryNavLinks)) || (hasTertiaryNav && !_.isEmpty(tertiaryNavLinks))) && (
                     <div className="site-footer__nav py-5 py-md-6">
                         <div className="container">
