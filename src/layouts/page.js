@@ -11,7 +11,6 @@ export default class Page extends React.Component {
         const page = _.get(this.props, 'page');
         const title = _.get(page, 'title');
         const markdownContent = _.get(page, 'markdown_content');
-        console.log("iswork?")
 
         return (
             <Layout page={page} config={config}>
