@@ -12,6 +12,7 @@ export default class Action extends React.Component {
         const style = _.get(action, 'style', 'link');
         const hasIcon = _.get(action, 'has_icon');
         const icon = _.get(action, 'icon');
+        const showIcon = hasIcon && icon;
         const iconPos = _.get(action, 'icon_position', 'right');
         const classes = classNames({
             'btn': style === 'primary' || style === 'secondary' || (hasIcon && icon),
