@@ -40,7 +40,7 @@ export default class Header extends React.Component {
         document.body.classList.toggle('js-nav-open');
     }
 
-    renderNavLinks(navLinks, pageUrl) {
+    renderNavLinks(navLinks, pageUrl, navKey) {
         return (
             <ul className="menu flex-md items-md-center">
                 {_.map(navLinks, (action, index) => {
