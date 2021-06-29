@@ -31,8 +31,10 @@ export default class Action extends React.Component {
             attrs.rel = [(newWindow ? 'noopener' : ''), (noFollow ? 'nofollow' : '')].filter(Boolean).join(' ');
         }
 
+        const sbFieldPath = showIcon
+
         return (
-            <Link href={withPrefix(url)} {...attrs} className={classes} data-sb-field-path={`.label`}>
+            <Link href={withPrefix(url)} {...attrs} className={classes} data-sb-field-path={``}>
                 {(showIcon) ? (
                     <React.Fragment>
                         <Icon icon={icon} />
