@@ -53,6 +53,7 @@ export default class Header extends React.Component {
                                 'is-active': pageUrl === actionUrl && actionStyle === 'link',
                                 'menu__item-btn': actionStyle !== 'link'
                             })}
+                            data-sb-field-path={`.${index}`}
                         >
                             <Action action={action} />
                         </li>
