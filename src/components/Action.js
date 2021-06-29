@@ -34,7 +34,7 @@ export default class Action extends React.Component {
         const sbFieldPath = `${!showIcon && '.label'} .url#@href`
 
         return (
-            <Link href={withPrefix(url)} {...attrs} className={classes} data-sb-field-path={``}>
+            <Link href={withPrefix(url)} {...attrs} className={classes} data-sb-field-path={sbFieldPath}>
                 {(showIcon) ? (
                     <React.Fragment>
                         <Icon icon={icon} />
