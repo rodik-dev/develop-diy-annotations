@@ -30,7 +30,8 @@
             {
                 "label": "Blog",
                 "url": "/blog",
-                "style": "link"
+                "style": "link",
+                "has_icon": true
             },
             {
                 "label": "Style Guide",
