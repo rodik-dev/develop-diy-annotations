@@ -36,7 +36,7 @@ export default class Action extends React.Component {
             '.url#@href',
             `.label${showIcon ? '#span[1]' : ''}`
         ];
-        if (showIcon) { annotations.push('.icon#svg[1]!') }
+        if (showIcon) { annotations.push('.icon#svg[1]') }
 
         return (
             <Link href={withPrefix(url)} {...attrs} className={classes} data-sb-field-path={annotations.join(' ')}>
