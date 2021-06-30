@@ -42,7 +42,7 @@ export default class Header extends React.Component {
 
     renderNavLinks(navLinks, pageUrl, navKey) {
         return (
-            <ul className="menu flex-md items-md-center" data-sb-field-path={`.${navKey}`}>
+            <ul className="menu flex-md items-md-center" data-sb-field-path={`.${navKey}_nav_links`}>
                 {_.map(navLinks, (action, index) => {
                     const actionUrl = _.trim(_.get(action, 'url'), '/');
                     const actionStyle = _.get(action, 'style', 'link');
@@ -82,8 +82,8 @@ export default class Header extends React.Component {
                     <nav className="navbar flex items-center" aria-label="Main Navigation">
                         <Link className="sr-only" href="#content">Skip to main content</Link>
                         <div className="navbar__branding mr-2">
-                            {logo ? <Link className="navbar__logo m-0" href={withPrefix('/')}><img src={withPrefix(logo)} alt={logoAlt} /></Link>
-                                : <Link className="navbar__title h4 m-0" href={withPrefix('/')}>{title}</Link>}
+                            {logo ? <Link className="navbar__logo m-0" href={withPrefix('/')}><img src={withPrefix(logo)} alt={logoAlt} data-sb-field-path=".logo_alt#@alt .logo#@src"/></Link>
+                                : <Link className="navbar__title h4 m-0" href={withPrefix('/')} data-sb-field-path=".title">{title}</Link>}
                         </div>
                         {((hasPrimaryNav && !_.isEmpty(primaryNavLinks)) || (hasSecondaryNav && !_.isEmpty(secondaryNavLinks))) && (
                             <React.Fragment>
@@ -95,8 +95,8 @@ export default class Header extends React.Component {
                                                 <span className="sr-only">Close</span>
                                             </button>
                                             <div className="navbar__menu flex-md">
-                                                {hasPrimaryNav && !_.isEmpty(primaryNavLinks) && this.renderNavLinks(primaryNavLinks, pageUrl, 'primary_nav_links')}
-                                                {hasSecondaryNav && !_.isEmpty(secondaryNavLinks) && this.renderNavLinks(secondaryNavLinks, pageUrl, 'secondary_nav_links')}
+                                                {hasPrimaryNav && !_.isEmpty(primaryNavLinks) && this.renderNavLinks(primaryNavLinks, pageUrl, 'primary')}
+                                                {hasSecondaryNav && !_.isEmpty(secondaryNavLinks) && this.renderNavLinks(secondaryNavLinks, pageUrl, 'secondary')}
                                             </div>
                                         </div>
                                     </div>
