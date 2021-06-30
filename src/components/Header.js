@@ -79,7 +79,7 @@ export default class Header extends React.Component {
         return (
             <header className="site-header py-2" data-sb-field-path={`${config.__metadata.id}:header`}>
                 <div className="container">
-                    <nav className="navbar flex items-center" aria-label="Main Navigation" data-sb-field-path=".has_primary_nav">
+                    <nav className="navbar flex items-center" aria-label="Main Navigation">
                         <Link className="sr-only" href="#content">Skip to main content</Link>
                         <div className="navbar__branding mr-2">
                             {logo ? <Link className="navbar__logo m-0" href={withPrefix('/')}><img src={withPrefix(logo)} alt={logoAlt} data-sb-field-path=".logo#@src"/></Link>
