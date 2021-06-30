@@ -7,13 +7,13 @@ import ActionIcon from './ActionIcon';
 import ActionLink from './ActionLink';
 
 export default class Footer extends React.Component {
-    renderNav(navLinks, navTitle) {
+    renderNav(navLinks, navTitle, navKey) {
         return (
             <div className="site-footer__menu cell-12 cell-md my-3 my-md-4">
-                {navTitle && <h2 className="h4 mb-3 mb-md-4">{navTitle}</h2>}
-                <ul className="menu">
+                {navTitle && <h2 className="h4 mb-3 mb-md-4" data-sb-field-path={`.${navKey}_nav_title`}>{navTitle}</h2>}
+                <ul className="menu" data-sb-field-path={`.${navKey}_nav_links`}>
                     {_.map(navLinks, (action, index) => (
-                        <li key={index} className="menu__item mb-1">
+                        <li key={index} className="menu__item mb-1" data-sb-field-path={`.${index}`}>
                             <Action action={action} />
                         </li>
                     ))}
@@ -52,9 +52,9 @@ export default class Footer extends React.Component {
                                 })}
                             >
                                 {logo && <Link className="site-footer__logo cell-12 cell-md-5 my-4" href={withPrefix('/')}><img src={withPrefix(logo)} alt={logoAlt} /></Link>}
-                                {hasPrimaryNav && !_.isEmpty(primaryNavLinks) && this.renderNav(primaryNavLinks, primaryNavTitle)}
-                                {hasSecondaryNav && !_.isEmpty(secondaryNavLinks) && this.renderNav(secondaryNavLinks, secondaryNavTitle)}
-                                {hasTertiaryNav && !_.isEmpty(tertiaryNavLinks) && this.renderNav(tertiaryNavLinks, tertiaryNavTitle)}
+                                {hasPrimaryNav && !_.isEmpty(primaryNavLinks) && this.renderNav(primaryNavLinks, primaryNavTitle, 'primary')}
+                                {hasSecondaryNav && !_.isEmpty(secondaryNavLinks) && this.renderNav(secondaryNavLinks, secondaryNavTitle, 'secondary')}
+                                {hasTertiaryNav && !_.isEmpty(tertiaryNavLinks) && this.renderNav(tertiaryNavLinks, tertiaryNavTitle, 'tertiary')}
                             </div>
                         </div>
                     </div>
