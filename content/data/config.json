@@ -31,7 +31,8 @@
                 "label": "Blog",
                 "url": "/blog",
                 "style": "link",
-                "has_icon": true
+                "has_icon": true,
+                "icon": "arrow-right"
             },
             {
                 "label": "Style Guide",
